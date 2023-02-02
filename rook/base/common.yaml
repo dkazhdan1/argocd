@@ -677,9 +677,6 @@ metadata:
     seccomp.security.alpha.kubernetes.io/defaultProfileName: "runtime/default"
 spec:
   privileged: true
-  allowedCapabilities:
-    # required by CSI
-    - SYS_ADMIN
   # fsGroup - the flexVolume agent has fsGroup capabilities and could potentially be any group
   fsGroup:
     rule: RunAsAny

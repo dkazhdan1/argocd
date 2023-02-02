@@ -21,7 +21,7 @@ spec:
       source:
         repoURL: https://github.com/dkazhdan1/argocd.git
         targetRevision: main
-        path: "rook/overlays/clusterx/{{name}}"
+        path: "rook/overlays/{{name}}"
       destination:
         server: '{{server}}'
         namespace: rook-ceph

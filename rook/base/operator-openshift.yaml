@@ -14,7 +14,6 @@ allowPrivilegedContainer: true
 allowHostNetwork: true
 allowHostDirVolumePlugin: true
 priority:
-allowedCapabilities: []
 allowHostPorts: true
 allowHostPID: true # remove this once we drop support for Nautilus
 allowHostIPC: true
@@ -22,7 +21,6 @@ readOnlyRootFilesystem: false
 requiredDropCapabilities: []
 defaultAddCapabilities: []
 #dima
-allowedCapabilities: ["MKNOD"]
 runAsUser:
   type: RunAsAny
 seLinuxContext:
