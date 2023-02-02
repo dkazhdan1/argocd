@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: bgd
+  name: rook-ceph-install
   namespace: openshift-gitops
 spec:
   generators:
@@ -19,9 +19,15 @@ spec:
           prune: true
           selfHeal: true
       source:
-        repoURL: https://github.com/christianh814/gitops-examples
+        repoURL: https://github.com/dkazhdan1/argocd.git
         targetRevision: main
-        path: applicationsets/cluster-generator/overlays/dev/
+        path: "rook/overlays/clusterx/{{name}}"
       destination:
         server: '{{server}}'
         namespace: rook-ceph
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
