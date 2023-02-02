@@ -57,7 +57,7 @@ spec:
         value: "true"
   continueUpgradeAfterChecksEvenIfNotHealthy: false
   mgr:
-    count: 1
+    count: 3
     modules:
       - name: pg_autoscaler
         enabled: true
