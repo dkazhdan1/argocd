@@ -4,5 +4,5 @@ namespace: rook-ceph
 bases:
   - ../../base
 
-#resources:
-#  - namespace.yaml
+resources:
+  - cluster-on-pvc.yaml
