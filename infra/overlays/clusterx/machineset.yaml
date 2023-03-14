@@ -6,7 +6,7 @@ metadata:
   name: clusterx-5fnqz-infra
   namespace: openshift-machine-api
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: clusterx-5fnqz
