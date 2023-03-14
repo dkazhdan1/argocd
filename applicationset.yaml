@@ -11,7 +11,7 @@ spec:
           cluster-name: clusterx
   template:
     metadata:
-      name: '{{name}}-rook'
+      name: '{{name}}-infra'
     spec:
       project: default
       syncPolicy:
@@ -21,10 +21,10 @@ spec:
       source:
         repoURL: https://github.com/dkazhdan1/argocd.git
         targetRevision: main
-        path: "rook/overlays/{{name}}"
+        path: "infra/overlays/{{name}}"
       destination:
         server: '{{server}}'
-        namespace: rook-ceph
+#        namespace: rook-ceph
       syncPolicy:
         automated:
           prune: true

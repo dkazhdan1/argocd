@@ -1,0 +1,15 @@
+apiVersion: config.openshift.io/v1
+kind: Image
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  name: cluster
+spec:
+  registrySources:
+    insecureRegistries:
+    - docker-dev-local.si1ocevar01.clustere.ifdsgroup.ca
+    - docker-prod-local.si1ocevar01.clustere.ifdsgroup.ca
+    - docker-nonprod-local.si1ocevar01.clustere.ifdsgroup.ca
+    - registry.com
