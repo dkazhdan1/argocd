@@ -2,7 +2,7 @@ apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
   annotations:
-    machine.openshift.io/memoryMb: "32796"
+    machine.openshift.io/memoryMb: "32768"
     machine.openshift.io/vCPU: "8"
   labels:
     machine.openshift.io/cluster-api-cluster: clusterx-kgpxc
@@ -22,36 +22,36 @@ spec:
         machine.openshift.io/cluster-api-machine-type: worker
         machine.openshift.io/cluster-api-machineset: clusterx-kgpxc-infra
     spec:
-     metadata:
-       labels:
-         cluster.ocs.openshift.io/openshift-storage: ""
-         node-role.kubernetes.io/infra: ""
-     providerSpec:
-       value:
-         apiVersion: machine.openshift.io/v1beta1
-         credentialsSecret:
-           name: vsphere-cloud-credentials
-         diskGiB: 120
-         kind: VSphereMachineProviderSpec
-         memoryMiB: 32768
-         metadata:
-           creationTimestamp: null
-         network:
-           devices:
-           - networkName: dvPG_VLAN361-OCLAB
-         numCPUs: 8
-         numCoresPerSocket: 8
-         snapshot: ""
-         template: clusterx-kgpxc-rhcos
-         userDataSecret:
-           name: worker-user-data
-         workspace:
-           datacenter: Markham 6.7
-           datastore: purefa-mrk1-clusterx-ds01
-           folder: /Markham 6.7/vm/clusterx-kgpxc
-           resourcePool: /Markham 6.7/host/MRK_CLUSTERX/Resources
-           server: si2vpavc04.canada01.ifdsnet.int
-     taints:
-     - effect: NoSchedule
-       key: node.ocs.openshift.io/storage
-       value: "true"
+      metadata:
+        labels:
+          cluster.ocs.openshift.io/openshift-storage: ""
+          node-role.kubernetes.io/infra: ""
+      providerSpec:
+        value:
+          apiVersion: machine.openshift.io/v1beta1
+          credentialsSecret:
+            name: vsphere-cloud-credentials
+          diskGiB: 120
+          kind: VSphereMachineProviderSpec
+          memoryMiB: 32768
+          metadata:
+            creationTimestamp: null
+          network:
+            devices:
+            - networkName: dvPG_VLAN361-OCLAB
+          numCPUs: 8
+          numCoresPerSocket: 8
+          snapshot: ""
+          template: clusterx-5fnqz-rhcos
+          userDataSecret:
+            name: worker-user-data
+          workspace:
+            datacenter: Markham 6.7
+            datastore: purefa-mrk1-clusterx-ds01
+            folder: /Markham 6.7/vm/clusterx-kgpxc
+            resourcePool: /Markham 6.7/host/MRK_CLUSTERX/Resources
+            server: si2vpavc04.canada01.ifdsnet.int
+      taints:
+      - effect: NoSchedule
+        key: node.ocs.openshift.io/storage
+        value: "true"
