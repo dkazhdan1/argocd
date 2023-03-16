@@ -1,0 +1,29 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+  - name: ldapidp 
+    mappingMethod: claim 
+    type: LDAP
+    ldap:
+      attributes:
+        id: 
+        - dn
+        email: 
+        - mail
+        name: 
+        - cn
+        preferredUsername: 
+        - sAMAccountName
+      bindDN: "CN=OCP Mgmt,OU=Services Accounts,OU=Users Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int"
+      bindPassword:
+        name: ldap-secret
+      insecure: true
+      url: >-
+        ldap://ai2vpmcanada01.canada01.ifdsnet.int/DC=canada01,DC=ifdsnet,DC=int?sAMAccountName?sub?(&(|(memberOf=CN=ocp.ifdsnet.int_Admin,OU=Infrastructure
+        Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp.ifdsnet.int_User,OU=Infrastructure
+        Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp.ifdsnet.int_ReadOnly,OU=Infrastructure
+        Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp.ifdsnet.int_SuperUser,OU=Infrastructure
+        Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int))(objectClass=user))

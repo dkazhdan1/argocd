@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+  name: add-cluster-role-bindings
+spec:
+  template:
+    spec:
+      containers:
+        - image:  openshift/origin-cli
+          command:
+            - /bin/bash
+            - -c
+            - |
+              #!/usr/bin/env bash
+              set -e
+                oc adm policy add-cluster-role-to-group cluster-admin 'CN=ocp.ifdsnet.int_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int' 
+          imagePullPolicy: Always
+          name: add-cluster-role-bindings
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      serviceAccount: oc-service-account
+      serviceAccountName: oc-service-account
+      terminationGracePeriodSeconds: 30

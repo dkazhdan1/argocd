@@ -1,0 +1,54 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  labels:
+    machine.openshift.io/cluster-api-cluster: clusterx-5fnqz
+  name: clusterx-5fnqz-infra
+  namespace: openshift-machine-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: clusterx-5fnqz
+      machine.openshift.io/cluster-api-machineset: clusterx-5fnqz-infra
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: clusterx-5fnqz
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: clusterx-5fnqz-infra
+    spec:
+      metadata:
+        labels:
+          cluster.ocs.openshift.io/openshift-storage: ""
+          node-role.kubernetes.io/infra: ""
+      providerSpec:
+        value:
+          apiVersion: machine.openshift.io/v1beta1
+          credentialsSecret:
+            name: vsphere-cloud-credentials
+          diskGiB: 120
+          kind: VSphereMachineProviderSpec
+          memoryMiB: 16384
+          metadata:
+            creationTimestamp: null
+          network:
+            devices:
+            - networkName: dvPG_VLAN361-OCLAB
+          numCPUs: 4
+          numCoresPerSocket: 4
+          snapshot: ""
+          template: clusterx-5fnqz-rhcos
+          userDataSecret:
+            name: worker-user-data
+          workspace:
+            datacenter: Markham 6.7
+            datastore: purefa-mrk1-clusterx-ds01
+            folder: /Markham 6.7/vm/clusterx-5fnqz
+            resourcePool: /Markham 6.7/host/MRK_CLUSTERX/Resources
+            server: si2vpavc04.canada01.ifdsnet.int
+      taints:
+      - effect: NoSchedule
+        key: node.ocs.openshift.io/storage
+        value: "true"
