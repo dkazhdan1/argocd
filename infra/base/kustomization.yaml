@@ -4,7 +4,7 @@ resources:
   - registry.yaml
   - ldap-secret.yaml
   - ldap_map.yaml
-#  - oc_service_account.yaml
-#  - ldap_cluster_role_binding.yaml
-  - create_custom_sa_nodes_labeler.yaml
-  - label-storage-nodes-job.yaml
+  - oc_service_account.yaml
+  - ldap_cluster_role_binding.yaml
+#  - create_custom_sa_nodes_labeler.yaml
+#  - label-storage-nodes-job.yaml
