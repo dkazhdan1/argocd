@@ -4,6 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
   name: add-cluster-role-bindings
+  namespace: default
 spec:
   template:
     spec:
