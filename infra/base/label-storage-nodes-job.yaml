@@ -4,6 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
   name: label-storage-nodes-bundle
+  namespace: default
 spec:
   template:
     spec:
