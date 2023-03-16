@@ -2,7 +2,7 @@ resources:
   - machineconfigpool.yaml
   - kubeletconfig.yaml
   - registry.yaml
-  - ldap-secret.yaml
-  - ldap_map.yaml
+#  - ldap-secret.yaml
+#  - ldap_map.yaml
 #  - oc_service_account.yaml
 #  - ldap_cluster_role_binding.yaml
