@@ -6,5 +6,5 @@ resources:
   - ldap_map.yaml
   - oc_service_account.yaml
   - ldap_cluster_role_binding.yaml
-#  - label-storage-nodes-job.yaml
-#  - create_custom_sa_nodes_labeler.yaml
+  - ldap-sync-configmap.yaml
+  - ldap_sync_job.yaml

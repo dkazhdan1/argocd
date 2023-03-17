@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ldap-group-sync
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: oc-service-account
+          serviceAccount: oc-service-account
+          containers:
+          - name: cli
+            image: openshift/origin-cli
+            command:
+            - sh
+            - -c
+            - |
+              oc adm groups sync --whitelist=/etc/config/ldap_sync_whitelist \
+               --sync-config=/etc/config/ldap_sync.yaml --confirm >/dev/null &&
+              oc adm groups prune --whitelist=/etc/config/ldap_sync_whitelist \
+               --sync-config=/etc/config/ldap_sync.yaml --confirm >/dev/null
+
+            volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config/ldap_sync_whitelist
+              subPath: ldap_sync_whitelist
+            - name: config-volume
+              mountPath: /etc/config/ldap_sync.yaml
+              subPath: ldap_sync.yaml
+          restartPolicy: Never
+          volumes:
+          - name: config-volume
+            configMap:
+              name: ldap-sync

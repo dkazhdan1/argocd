@@ -1,0 +1,35 @@
+apiVersion: v1
+data:
+  ldap_sync.yaml: |
+    kind: LDAPSyncConfig
+    apiVersion: v1
+    url: "ldap://ai2vpmcanada01.canada01.ifdsnet.int"
+    bindDN: "CN=OCP Mgmt,OU=Services Accounts,OU=Users Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int"
+    bindPassword: "!XJa1XXL#Y02Kx45pu$1"
+    insecure: true
+    augmentedActiveDirectory:
+        groupsQuery:
+            baseDN: "OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int"
+            scope: sub
+            derefAliases: never
+            pageSize: 0
+        groupUIDAttribute: dn
+        groupNameAttributes: [ dn ]
+        usersQuery:
+            baseDN: "DC=canada01,DC=ifdsnet,DC=int"
+            scope: sub
+            derefAliases: never
+            filter: (&(|(memberOf=CN=ocp.ifdsnet.int_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp.ifdsnet.int_ReadOnly,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp.ifdsnet.int_SuperUser,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int)(memberOf=CN=ocp_chimp2_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int))(objectClass=user))
+            pageSize: 0
+        userNameAttributes: [ sAMAccountName ]
+        groupMembershipAttributes: [ memberOf ]
+  ldap_sync_whitelist: |+
+    CN=ocp.ifdsnet.int_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    CN=ocp.ifdsnet.int_SuperUser,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    CN=ocp_chimp2_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+
+kind: ConfigMap
+metadata:
+  name: ldap-sync
+  namespace: default

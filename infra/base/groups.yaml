@@ -1,0 +1,265 @@
+apiVersion: v1
+items:
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2023-02-05T11:18:30-0500
+      openshift.io/ldap.uid: CN=ocp.ifdsnet.int_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+      openshift.io/ldap.url: ai2vpmcanada01.canada01.ifdsnet.int:389
+    creationTimestamp: "2023-02-05T16:07:44Z"
+    labels:
+      openshift.io/ldap.host: ai2vpmcanada01.canada01.ifdsnet.int
+    managedFields:
+    - apiVersion: user.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/ldap.sync-time: {}
+            f:openshift.io/ldap.uid: {}
+            f:openshift.io/ldap.url: {}
+          f:labels:
+            .: {}
+            f:openshift.io/ldap.host: {}
+        f:users: {}
+      manager: oc
+      operation: Update
+      time: "2023-02-05T16:07:44Z"
+    name: CN=ocp.ifdsnet.int_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    resourceVersion: "49862"
+    uid: edb01ad0-80f4-45f2-a1d6-85848479b3cd
+  users:
+  - ALBERTCH
+  - zaheerno
+  - NORORIOS
+  - razamaso
+  - patelpar
+  - BENJAMIJ
+  - if992742
+  - if993133
+  - IF993279
+  - if993978
+  - if994131
+  - if991001
+  - if994322
+  - if994371
+  - dkazhdan
+  - dt231670
+  - dt231998
+  - dt232809
+  - dt233187
+  - hpatel6
+  - dt235229
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2023-02-05T11:18:30-0500
+      openshift.io/ldap.uid: CN=ocp.ifdsnet.int_SuperUser,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+      openshift.io/ldap.url: ai2vpmcanada01.canada01.ifdsnet.int:389
+    creationTimestamp: "2023-02-05T16:07:44Z"
+    labels:
+      openshift.io/ldap.host: ai2vpmcanada01.canada01.ifdsnet.int
+    managedFields:
+    - apiVersion: user.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/ldap.sync-time: {}
+            f:openshift.io/ldap.uid: {}
+            f:openshift.io/ldap.url: {}
+          f:labels:
+            .: {}
+            f:openshift.io/ldap.host: {}
+        f:users: {}
+      manager: oc
+      operation: Update
+      time: "2023-02-05T16:07:44Z"
+    name: CN=ocp.ifdsnet.int_SuperUser,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    resourceVersion: "49863"
+    uid: 33f6e676-3baf-46ec-a694-148384d85e8b
+  users:
+  - POLLARDK
+  - zaheerno
+  - razamaso
+  - DROLETPE
+  - serbanel
+  - khankash
+  - listerpa
+  - if992742
+  - if992899
+  - if993133
+  - if993317
+  - if992833
+  - guest159
+  - if993682
+  - if993681
+  - if993889
+  - if993978
+  - if994066
+  - if994071
+  - if994131
+  - if994134
+  - wp040591
+  - if991001
+  - wp040740
+  - if994322
+  - if994371
+  - p826737
+  - sc150007
+  - dt231587
+  - dt232029
+  - dt231998
+  - dt232599
+  - dt232809
+  - dt233078
+  - dt233187
+  - dt233294
+  - dt233580
+  - dt233615
+  - dt233581
+  - dt234736
+  - hpatel6
+  - dt235229
+  - dt235326
+  - dt235373
+  - dt235456
+  - dopena
+  - dt235985
+  - dt237095
+  - aacharya
+  - dt238216
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2023-02-05T11:18:30-0500
+      openshift.io/ldap.uid: CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+      openshift.io/ldap.url: ai2vpmcanada01.canada01.ifdsnet.int:389
+    creationTimestamp: "2023-02-05T16:07:44Z"
+    labels:
+      openshift.io/ldap.host: ai2vpmcanada01.canada01.ifdsnet.int
+    managedFields:
+    - apiVersion: user.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/ldap.sync-time: {}
+            f:openshift.io/ldap.uid: {}
+            f:openshift.io/ldap.url: {}
+          f:labels:
+            .: {}
+            f:openshift.io/ldap.host: {}
+        f:users: {}
+      manager: oc
+      operation: Update
+      time: "2023-02-05T16:07:44Z"
+    name: CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    resourceVersion: "49864"
+    uid: e78f1187-429a-4be0-a0d1-b00414f4a4ad
+  users:
+  - if993517
+  - ALBERTCH
+  - serbanel
+  - listerpa
+  - if992742
+  - if993133
+  - if992833
+  - guest179
+  - if993682
+  - if993681
+  - if993889
+  - if994066
+  - if994071
+  - if994134
+  - wp040591
+  - if991001
+  - if994371
+  - sc150007
+  - dt231060
+  - dt231376
+  - dt231587
+  - dt232029
+  - dt231998
+  - dt232599
+  - dt232809
+  - dt233078
+  - dt233294
+  - dt233580
+  - dt233615
+  - dt233581
+  - dt234021
+  - dt234736
+  - hpatel6
+  - dt235229
+  - dt235326
+  - dt235373
+  - dt235456
+  - dt236093
+  - dt235985
+  - dt236616
+  - dt237095
+  - dt237317
+  - aacharya
+  - dt238099
+  - dt238098
+  - dt238216
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2023-02-05T11:18:30-0500
+      openshift.io/ldap.uid: CN=ocp_chimp2_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+      openshift.io/ldap.url: ai2vpmcanada01.canada01.ifdsnet.int:389
+    creationTimestamp: "2023-02-05T16:07:44Z"
+    labels:
+      openshift.io/ldap.host: ai2vpmcanada01.canada01.ifdsnet.int
+    managedFields:
+    - apiVersion: user.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/ldap.sync-time: {}
+            f:openshift.io/ldap.uid: {}
+            f:openshift.io/ldap.url: {}
+          f:labels:
+            .: {}
+            f:openshift.io/ldap.host: {}
+        f:users: {}
+      manager: oc
+      operation: Update
+      time: "2023-02-05T16:07:44Z"
+    name: CN=ocp_chimp2_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+    resourceVersion: "49865"
+    uid: c0b78f1b-b253-4b28-b00a-66b81fc26481
+  users:
+  - serbanel
+  - if993317
+  - if993978
+  - if994131
+  - if994322
+  - chimp2test
+  - dt233187
+  - dt233294
+  - dt233580
+  - dt233615
+  - dt233581
+  - dt234736
+  - hpatel6
+  - dt235326
+  - dt235373
+  - dt235456
+  - dt236616
+  - dt237317
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
