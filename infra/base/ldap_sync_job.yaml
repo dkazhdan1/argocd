@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: ldap-group-sync
+  namespace: default
 spec:
   schedule: "*/5 * * * *"
   jobTemplate:
