@@ -8,3 +8,4 @@ resources:
   - ldap_cluster_role_binding.yaml
   - ldap-sync-configmap.yaml
   - ldap_sync_job.yaml
+  - bind_pass.yaml

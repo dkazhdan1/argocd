@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  bindPassword: IVhKYTFYWEwjWTAyS3g0NXB1JDE=
+kind: Secret
+metadata:
+  labels:
+    app.kubernetes.io/instance: clusterx-infra
+  name: v4-0-config-user-idp-0-bind-password
+  namespace: openshift-authentication
+type: Opaque
