@@ -17,6 +17,14 @@ spec:
               #!/usr/bin/env bash
               set -e
                 oc adm policy add-cluster-role-to-group cluster-admin 'CN=ocp.ifdsnet.int_Admin,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int' 
+
+                oc adm policy add-cluster-role-to-group cluster-admin ifds-superuser 'CN=ocp.ifdsnet.int_SuperUser,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int'
+
+                oc adm policy add-cluster-role-to-group ifds-readonly 'CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int'
+
+
+
+
           imagePullPolicy: Always
           name: add-cluster-role-bindings
       dnsPolicy: ClusterFirst
