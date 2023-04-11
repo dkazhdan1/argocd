@@ -25,3 +25,4 @@ spec:
       destination:
         server: '{{server}}'
         namespace: bgd
+
