@@ -1,0 +1,29 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterDeployment
+metadata:
+  name: clusterx1
+  namespace: clusterx1
+spec:
+  baseDomain: ifdsgroup.ca
+  clusterName: clusterx1
+  platform:
+    vsphere:
+      cluster: MRK_CLUSTERX
+      certificatesSecretRef:
+        name: clusterx1-vsphere-certs
+      credentialsSecretRef:
+        name: clusterx1-vsphere-creds
+      datacenter: Markham 6.7
+      defaultDatastore: purefa-mrk1-clusterx-ds01
+      folder: 
+      network: "dvPG_VLAN361-OCLAB"
+      vCenter:  si2vpavc04.canada01.ifdsnet.int
+  provisioning:
+    imageSetRef:
+      name: openshift-v4.11.33
+    installConfigSecretRef:
+      name: clusterx1-install-config
+    sshPrivateKeySecretRef:
+      name: clusterx1-ssh-key
+  pullSecretRef:
+    name: clusterx1-pull-secret

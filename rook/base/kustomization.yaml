@@ -1,4 +1,0 @@
-resources:
-  - common.yaml
-  - crds.yaml
-  - operator-openshift.yaml
