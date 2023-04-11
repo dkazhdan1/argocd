@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: clusterx1-standup
+spec:
+  destination:
+    name: local-cluster
+  project: default
+  source:
+    path: manifests/clusterx1
+    repoURL: https://github.com/dkazhdan1/argocd.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
