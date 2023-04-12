@@ -1,11 +1,11 @@
 apiVersion: hive.openshift.io/v1
 kind: MachinePool
 metadata:
-  name: mycluster-infra
-  namespace: mynamespace
+  name: clusterx1-infra
+  namespace: clusterx1
 spec:
   clusterDeploymentRef:
-    name: mycluster
+    name: clusterx1
   name: infra
   platform:
     vsphere:
