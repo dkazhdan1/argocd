@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: rook-ceph-install
+  name: cluster-config
   namespace: openshift-gitops
 spec:
   generators:
   - clusters:
       selector:
         matchLabels:
-          cluster-name: clusterx
+          cluster-name: clusterx1
   template:
     metadata:
       name: '{{name}}-infra'
@@ -20,14 +20,14 @@ spec:
           selfHeal: true
       source:
         repoURL: https://github.com/dkazhdan1/argocd.git
-        targetRevision: main
+        targetRevision: clusterx1
         path: "infra/overlays/{{name}}"
       destination:
         server: '{{server}}'
-#        namespace: rook-ceph
+        namespace: clusters
       syncPolicy:
         automated:
-          prune: true
+          prune: false
           selfHeal: true
         syncOptions:
           - CreateNamespace=true
