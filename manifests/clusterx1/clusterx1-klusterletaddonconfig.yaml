@@ -3,6 +3,8 @@ kind: KlusterletAddonConfig
 metadata:
   name: clusterx1
   namespace: clusterx1
+  labels:
+    app.kubernetes.io/instance: clusterx1
 spec:
   clusterName: clusterx1
   clusterNamespace: clusterx1
@@ -11,7 +13,7 @@ spec:
     vendor: OpenShift
   applicationManager:
     enabled: true
-    argocdCluster: true
+#    argocdCluster: true
   policyController:
     enabled: true
   searchCollector:
