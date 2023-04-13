@@ -9,3 +9,9 @@ resources:
   - ldap-sync-configmap.yaml
   - ldap_sync_job.yaml
   - bind_pass.yaml
+  - ifds-readonly_v1.yaml
+  - ifds-superuser-role_v1.yaml
+  - ifds-superuser_v1.yaml
+  - ifds-user_bindings_v1.yaml
+  - ifds-user_v1.yaml
+  - tiller_role.yaml
