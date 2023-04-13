@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- clusterq1-clusterdeployment.yaml
+- clusterq1-infra-machinepool.yaml
+- clusterq1-klusterletaddonconfig.yaml
+- clusterq1-managedclusterinfo.yaml
+- clusterq1-managedcluster.yaml
+- clusterq1-worker-machinepool.yaml
+- clusterq1-ClusterImageSet.yaml
+- secrets/clusterq1-vsphere-creds.yaml
+- secrets/clusterq1-vsphere-certs.yaml
+- secrets/clusterq1-install-config-externalsecret.yaml
+- secrets/clusterq1-pull-secret-externalsecret.yaml
+- secrets/clusterq1-ssh-private-key-externalsecret.yaml

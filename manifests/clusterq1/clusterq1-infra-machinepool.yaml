@@ -1,0 +1,24 @@
+apiVersion: hive.openshift.io/v1
+kind: MachinePool
+metadata:
+  name: clusterq1-infra
+  namespace: clusterq1
+spec:
+  clusterDeploymentRef:
+    name: clusterq1
+  name: infra
+  platform:
+    vsphere:
+      coresPerSocket: 1
+      cpus: 8
+      memoryMB: 98304
+      osDisk:
+        diskSizeGB: 360
+  replicas: 1
+  labels:
+    node-role.kubernetes.io/infra: ""
+    cluster.ocs.openshift.io/openshift-storage: ""
+  taints:
+  - effect: NoSchedule
+    key: node.ocs.openshift.io/storage
+    value: "true"

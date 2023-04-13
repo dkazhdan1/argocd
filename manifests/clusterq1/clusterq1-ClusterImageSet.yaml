@@ -1,0 +1,8 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterImageSet
+metadata:
+  name: openshift-v4.11.33
+  namespace: clusterq1
+spec:
+  releaseImage: quay.io/openshift-release-dev/ocp-release:4.11.33-x86_64
+
