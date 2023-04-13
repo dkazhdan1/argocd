@@ -14,3 +14,4 @@ resources:
 - secrets/clusterx1-install-config-externalsecret.yaml
 - secrets/clusterx1-pull-secret-externalsecret.yaml
 - secrets/clusterx1-ssh-private-key-externalsecret.yaml
+- clusterx1-policy.yaml
