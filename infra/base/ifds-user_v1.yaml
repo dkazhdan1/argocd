@@ -7,7 +7,7 @@ metadata:
 rules:
 - apiGroups:
   - ""
-  attributeRestrictions: null
+  
   resources:
   - pods
   - pods/attach
@@ -26,7 +26,7 @@ rules:
   - watch
 - apiGroups:
   - ""
-  attributeRestrictions: null
+  
   resources:
   - configmaps
   - endpoints
@@ -48,7 +48,7 @@ rules:
   - watch
 - apiGroups:
   - ""
-  attributeRestrictions: null
+  
   resources:
   - bindings
   - events
@@ -62,7 +62,7 @@ rules:
   - watch
 - apiGroups:
   - ""
-  attributeRestrictions: null
+  
   resources:
   - namespaces
   verbs:
@@ -71,7 +71,7 @@ rules:
   - watch
 - apiGroups:
   - apps
-  attributeRestrictions: null
+  
   resources:
   - deployments
   - deployments/rollback
@@ -90,7 +90,7 @@ rules:
   - watch
 - apiGroups:
   - apps
-  attributeRestrictions: null
+  
   resources:
   - daemonsets
   verbs:
@@ -99,7 +99,7 @@ rules:
   - watch
 - apiGroups:
   - batch
-  attributeRestrictions: null
+  
   resources:
   - cronjobs
   - jobs
@@ -114,7 +114,7 @@ rules:
   - watch
 - apiGroups:
   - extensions
-  attributeRestrictions: null
+  
   resources:
   - deployments
   - deployments/rollback
@@ -134,7 +134,7 @@ rules:
   - watch
 - apiGroups:
   - extensions
-  attributeRestrictions: null
+  
   resources:
   - daemonsets
   verbs:
@@ -143,7 +143,7 @@ rules:
   - watch
 - apiGroups:
   - policy
-  attributeRestrictions: null
+  
   resources:
   - poddisruptionbudgets
   verbs:
@@ -158,7 +158,7 @@ rules:
 - apiGroups:
   - ""
   - build.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - buildconfigs
   - buildconfigs/webhooks
@@ -175,7 +175,7 @@ rules:
 - apiGroups:
   - ""
   - build.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - builds/log
   verbs:
@@ -185,7 +185,7 @@ rules:
 - apiGroups:
   - ""
   - build.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - buildconfigs/instantiate
   - buildconfigs/instantiatebinary
@@ -195,14 +195,14 @@ rules:
 - apiGroups:
   - ""
   - build.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - builds/details
   verbs:
   - update
 - apiGroups:
   - build.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - jenkins
   verbs:
@@ -212,7 +212,7 @@ rules:
 - apiGroups:
   - ""
   - apps.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - deploymentconfigs
   - deploymentconfigs/scale
@@ -228,7 +228,7 @@ rules:
 - apiGroups:
   - ""
   - apps.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - deploymentconfigrollbacks
   - deploymentconfigs/instantiate
@@ -238,7 +238,7 @@ rules:
 - apiGroups:
   - ""
   - apps.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - deploymentconfigs/log
   - deploymentconfigs/status
@@ -249,7 +249,7 @@ rules:
 - apiGroups:
   - ""
   - image.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - imagestreamimages
   - imagestreammappings
@@ -268,7 +268,7 @@ rules:
 - apiGroups:
   - ""
   - image.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - imagestreams/status
   verbs:
@@ -278,7 +278,7 @@ rules:
 - apiGroups:
   - ""
   - image.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - imagestreams/layers
   verbs:
@@ -287,7 +287,7 @@ rules:
 - apiGroups:
   - ""
   - image.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - imagestreamimports
   verbs:
@@ -295,7 +295,7 @@ rules:
 - apiGroups:
   - ""
   - project.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - projects
   verbs:
@@ -306,7 +306,7 @@ rules:
 - apiGroups:
   - ""
   - quota.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - appliedclusterresourcequotas
   verbs:
@@ -316,7 +316,7 @@ rules:
 - apiGroups:
   - ""
   - route.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - routes
   verbs:
@@ -331,7 +331,7 @@ rules:
 - apiGroups:
   - ""
   - route.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - routes/custom-host
   verbs:
@@ -339,7 +339,7 @@ rules:
 - apiGroups:
   - ""
   - route.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - routes/status
   verbs:
@@ -349,7 +349,7 @@ rules:
 - apiGroups:
   - ""
   - route.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - routes/status
   verbs:
@@ -357,7 +357,7 @@ rules:
 - apiGroups:
   - ""
   - template.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - processedtemplates
   - templateconfigs
@@ -375,7 +375,7 @@ rules:
 - apiGroups:
   - extensions
   - networking.k8s.io
-  attributeRestrictions: null
+  
   resources:
   - networkpolicies
   verbs:
@@ -390,7 +390,7 @@ rules:
 - apiGroups:
   - ""
   - build.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - buildlogs
   verbs:
@@ -404,7 +404,7 @@ rules:
   - watch
 - apiGroups:
   - ""
-  attributeRestrictions: null
+  
   resources:
   - resourcequotausages
   verbs:
@@ -414,7 +414,7 @@ rules:
 - apiGroups:
   - ""
   - authorization.openshift.io
-  attributeRestrictions: null
+  
   resources:
   - resourceaccessreviews
   - subjectaccessreviews
@@ -422,7 +422,7 @@ rules:
   - create
 - apiGroups:
   - servicecatalog.k8s.io
-  attributeRestrictions: null
+  
   resources:
   - servicebindings
   - serviceinstances
@@ -436,7 +436,7 @@ rules:
   - watch
 - apiGroups:
   - settings.k8s.io
-  attributeRestrictions: null
+  
   resources:
   - podpresets
   verbs:
@@ -448,7 +448,7 @@ rules:
   - watch
 - apiGroups:
   - autoscaling
-  attributeRestrictions: null
+  
   resources:
   - horizontalpodautoscalers
   verbs:
@@ -462,7 +462,7 @@ rules:
   - watch
 - apiGroups:
   - ""
-  attributeRestrictions: null
+  
   resources:
   - bindings
   - events
