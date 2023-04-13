@@ -1,0 +1,20 @@
+apiVersion: v1
+items:
+- apiVersion: authorization.openshift.io/v1
+  groupNames:
+  - CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+  kind: RoleBinding
+  metadata:
+    annotations:
+      argocd.argoproj.io/sync-wave: "-5"
+    name: ifds-superuser
+  roleRef:
+    name: ifds-superuser-local
+  subjects:
+  - kind: Group
+    name: CN=ocp.ifdsnet.int_User,OU=Infrastructure Tools,OU=Groups Management,OU=Toronto,OU=IFDS,DC=canada01,DC=ifdsnet,DC=int
+  userNames: null
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

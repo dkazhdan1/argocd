@@ -15,8 +15,8 @@ spec:
     spec:
       project: default
       syncPolicy:
-        manual:
-          prune: true
+        automated:
+          prune: false
           selfHeal: true
       source:
         repoURL: https://github.com/dkazhdan1/argocd.git
